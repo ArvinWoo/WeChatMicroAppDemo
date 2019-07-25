@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/site/search",
+    "pages/siteinspection/siteinspection",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "LongDuFoodsDemo",
+    "navigationBarTextStyle": "black"
+  },"tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "pages/images/public/start.png",
+        "iconPath": "pages/images/public/end.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "登录",
+        "selectedIconPath": "pages/images/public/drawpaint.png",
+        "iconPath": "pages/images/public/draw.png"
+      },
+      {
+        "pagePath": "pages/site/search",
+        "text": "工地检查",
+        "selectedIconPath": "pages/images/public/notebook.png",
+        "iconPath": "pages/images/public/bookmark.png"
+      }
+    ]
+  },"networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于地图定位"
+    }
+  }
+}

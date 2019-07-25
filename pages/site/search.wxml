@@ -1,0 +1,164 @@
+<!--pages/site/search.wxml-->
+<!-- 顶部页签 -->
+<view style="height:90px;background: #FFF;">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list{{currentTab==0?' on':''}}" data-current="0" bindtap="swichAround">按周边搜索</view>
+    <view class="swiper-tab-list{{currentTab==1?' on':''}}" data-current="1" bindtap="swichSpecific">按具体工地搜索</view>
+    <view id="searchLineDIV" class="searchLineDIV">
+      <input type="text" placeholder="{{searchLinePlaceholder}}" maxlength="30" class="searchLinePlaceholder"/>
+      <text class="{{styleVisibility}} lineSearchUnit">(公里)</text>
+      <view style="">
+        <image class="lineSearchImg" mode="aspectFill" src="{{goto}}"></image>
+      </view>
+    </view> 
+  </view>
+</view>
+
+<!-- 下面页签体 -->
+<view current="{{currentTab}}" bindchange="bindChange" style="height:{{winHeight-91}}px">
+  <view class="{{Tab1}}" style="height:100%;width:100%;">
+    <map id="map" longitude="{{longitude}}"
+      latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" show-location="true" 
+      markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" 
+      bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
+    </map>
+  </view>
+
+  <view class="{{Tab2}} t2_background">
+    <!-- Part1 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+    <!-- Part2 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+    <!-- Part3 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+  <!-- Part4 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+    <!-- Part5 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+    <!-- Part6 -->
+    <view class="t2_content">
+      <view class="t2_content_f">
+        <text class="t2_content_t">工地名称:</text>
+        <text class="t2_content_s">x x x x</text>
+        <!-- <text class="t2_content_1">填报中</text> -->
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">类型</text>
+        <text class="t2_content_f3">房屋建筑</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">工地编码</text>
+        <text class="t2_content_f3">00012</text>
+      </view>
+      <view class="t2_content_fg">
+        <text class="t2_content_f2">地址</text>
+        <text class="t2_content_f3">崔家店路52号</text>
+      </view>
+    </view>
+    <view class="t2_marBottomPer2"></view>
+ 
+  </view>
+
+</view>
+
+<!-- 浮动元素 -->
+<!-- 定位 -->
+<image class="{{Tab1}} dingwei" bindtap="dingwei" src="../images/site/search/dingwei.png"></image>
+<!-- 原型-列表 -->
+<image class="{{Tab1}} tuoyuan" bindtap="tuoyuanList" src="../images/site/search/tuoyuan.png">
+  <text class="tuoyuanFont">列表</text>
+</image>
+<!-- 原型-地图 -->
+<image class="{{Tab2}} tuoyuan" bindtap="tuoyuanMap" src="../images/site/search/tuoyuan.png">
+  <text class="tuoyuanFont">地图</text>
+</image>
