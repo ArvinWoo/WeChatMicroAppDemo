@@ -13,14 +13,14 @@ Page({
     goto:'../images/site/search/goto.png',//lineSearch 图标
     searchLinePlaceholder:'请输入周边范围',//lineSearch input 提示
     styleVisibility:'visShow',//lineSearch 公里 Style属性
+    iconZaiJian: "../images/site/search/zaijian.png",
+    iconTuoYuan: "../images/site/search/tuoyuan.png",
+    iconChouJian: "../images/site/search/choujian.png",
+    iconDingWei: "../images/site/search/dingwei.png",
     Tab1:'',
     Tab2:'disNone',
     markers: [{
-      iconPath:"../imges/site/zaijian.png",
-      iconZaiJian: "../imges/site/zaijian.png",
-      iconTuoYuan: "../imges/site/tuoyuan.png",
-      iconChouJian: "../imges/site/choujian.png",
-      iconDingWei: "../imges/site/dingwei.png",
+      iconPath:"../images/site/search/zaijian.png",
       id: 0,
       latitude: 40.002607,
       longitude: 116.487847,
@@ -71,7 +71,7 @@ Page({
   /** 
    * 按周边搜索
    */
-  swichAround: function (e) {
+  swichAroundFn: function (e) {
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
@@ -88,7 +88,7 @@ Page({
    /** 
    * 按具体工地搜索
    */
-  swichSpecific: function (e) {
+  swichSpecificFn: function (e) {
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
@@ -102,7 +102,7 @@ Page({
       })
     }
   },
-  dingwei:function(e){
+  dingweiFn:function(e){
     var that = this;
     wx.getLocation({
       type: 'wgs84',

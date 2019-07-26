@@ -122,11 +122,19 @@ page{
 }
 /* 浮动元素样式 */
 .dingwei{
-  height: 30px;
-  width: 30px;
   position: absolute;
   left: 5%;
   top: 85%;
+  width:30px;
+  height:30px;
+  background:#FFF;
+  border-radius:5px;
+}
+.dingweiImg{
+  width:18px;
+  height:18px;
+  margin:20% auto;
+  display:block;
 }
 .tuoyuan{
   height: 80px;

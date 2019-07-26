@@ -2,8 +2,8 @@
 <!-- 顶部页签 -->
 <view style="height:90px;background: #FFF;">
   <view class="swiper-tab">
-    <view class="swiper-tab-list{{currentTab==0?' on':''}}" data-current="0" bindtap="swichAround">按周边搜索</view>
-    <view class="swiper-tab-list{{currentTab==1?' on':''}}" data-current="1" bindtap="swichSpecific">按具体工地搜索</view>
+    <view class="swiper-tab-list{{currentTab==0?' on':''}}" data-current="0" bindtap="swichAroundFn">按周边搜索</view>
+    <view class="swiper-tab-list{{currentTab==1?' on':''}}" data-current="1" bindtap="swichSpecificFn">按具体工地搜索</view>
     <view id="searchLineDIV" class="searchLineDIV">
       <input type="text" placeholder="{{searchLinePlaceholder}}" maxlength="30" class="searchLinePlaceholder"/>
       <text class="{{styleVisibility}} lineSearchUnit">(公里)</text>
@@ -153,12 +153,14 @@
 
 <!-- 浮动元素 -->
 <!-- 定位 -->
-<image class="{{Tab1}} dingwei" bindtap="dingwei" src="../images/site/search/dingwei.png"></image>
+<view class="{{Tab1}} dingwei" bindtap="dingweiFn">
+  <image class="dingweiImg" src="{{iconDingWei}}"></image>
+</view>
 <!-- 原型-列表 -->
-<image class="{{Tab1}} tuoyuan" bindtap="tuoyuanList" src="../images/site/search/tuoyuan.png">
+<image class="{{Tab1}} tuoyuan" bindtap="tuoyuanList" src="{{iconTuoYuan}}">
   <text class="tuoyuanFont">列表</text>
 </image>
 <!-- 原型-地图 -->
-<image class="{{Tab2}} tuoyuan" bindtap="tuoyuanMap" src="../images/site/search/tuoyuan.png">
+<image class="{{Tab2}} tuoyuan" bindtap="tuoyuanMap" src="{{iconTuoYuan}}">
   <text class="tuoyuanFont">地图</text>
 </image>

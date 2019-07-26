@@ -105,5 +105,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  primaryFn: function (e) {
+    wx.navigateTo({
+      url: '../site/search',
+    })
   }
 })
+
+
